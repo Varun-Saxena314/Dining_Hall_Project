@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: mealmind-postgres
+    environment:
+      POSTGRES_DB: mealmind
+      POSTGRES_USER: vsaxena314
+      POSTGRES_PASSWORD: mealmind
+    ports:
+      - "5432:5432"
+    volumes:
+      - mealmind_pgdata:/var/lib/postgresql/data
+
+volumes:
+  mealmind_pgdata:
